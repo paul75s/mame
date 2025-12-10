@@ -33,6 +33,17 @@ TODO:
 		</part>
 	</software>
 
+	<software name="mz1z001a" cloneof="mz1z001" supported="yes">
+		<description>BASIC MZ-1Z001 v1.0c (Alt)</description>
+		<year>1982</year>
+		<publisher>Sharp</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4637244">
+				<rom name="mz-1z001.wav" size="4637244" crc="52489ca1" sha1="ddc00f8408e6607e99e58a5b3fc101dd0b298399" />
+			</dataarea>
+		</part>
+	</software>
+
 	<software name="mz1z002" supported="no">
 		<description>BASIC MZ-1Z002 v1.0a</description>
 		<year>1982</year>
@@ -44,24 +55,35 @@ TODO:
 		</part>
 	</software>
 
+	<software name="mz1z002a" cloneof="mz1z002" supported="yes">
+		<description>BASIC MZ-1Z002 v1.0a (Alt)</description>
+		<year>1982</year>
+		<publisher>Sharp</publisher>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="5569180">
+				<rom name="mz-1z002.wav" size="5569180" crc="fc31e809" sha1="743e42ff6a23732a55dfd6134018b7c3d0b0e6f0" />
+			</dataarea>
+		</part>
+	</software>
+
 <!-- !Games -->
 
 	<software name="alien" supported="partial">
 		<description>Alien</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>
-		<notes><![CDATA[Remove Alien BASIC cassette image once loading completes and Ready prompt will display. Type RUN and hit ENTER and insert and start the Alien Monitor cassette image. Once loading completes remove the Monitor cassette image and the game will run.]]></notes>
+		<publisher>&lt;unknown&gt;</publisher>
+		<notes><![CDATA[Load Alien BASIC cassette image, type RUN, hit ENTER and insert and start the Alien Monitor cassette image. Once loading completes remove the Monitor cassette image and the game will run. Only BASIC cassette is required for mono display mode (option 2).]]></notes>
 		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<feature name="part_id" value="Part 1 - BASIC"/>
-			<dataarea name="cass" size="1623868">
-				<rom name="alien - basic.wav" size="1623868" crc="67220cc4" sha1="13b3052621bf0d167f47dc700a8a8a29da06f278" />
+			<dataarea name="cass" size="6173">
+				<rom name="alien - basic.mzt" size="6173" crc="ab484d61" sha1="71d270203f280eb3e93ecdab0107c03fdbfce912" />
 			</dataarea>
 		</part>
 		<part name="cass2" interface="mz_cass">
 			<feature name="part_id" value="Part 2 - MONITOR"/>
-			<dataarea name="cass" size="1220396">
-				<rom name="alien - monitor.wav" size="1220396" crc="9b13c558" sha1="699289b9edd53bd1f0f209811ce1ad32c9d834fe" />
+			<dataarea name="cass" size="4224">
+				<rom name="alien - monitor.mzt" size="4224" crc="bff007bd" sha1="b64872dd1f00e0dc12db6fe577d5d05b0c6f47c3" />
 			</dataarea>
 		</part>
 	</software>
@@ -133,22 +155,21 @@ TODO:
 		</part>
 	</software>
 
-	<software name="dining" supported="partial">
+	<software name="dining" supported="yes">
 		<description>Dining Kitchen</description>
 		<year>1982</year>
 		<publisher>Isoro Valza</publisher>
-		<notes><![CDATA[Remove Dining Kitchen BASIC cassette image once loading completes and Ready prompt will display. Type RUN and hit ENTER and insert and start the Dining Kitchen Monitor cassette image. Once loading completes remove the Monitor cassette image and the game will run.]]></notes>
-		<info name="usage" value="mz1z002 LOAD" />
+		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<feature name="part_id" value="Part 1 - BASIC"/>
-			<dataarea name="cass" size="3170428">
-				<rom name="dining kitchen - basic.wav" size="3170428" crc="3f07e33c" sha1="a6b48d5c3d6c6408a12b6ceab719de60540a163d" />
+			<dataarea name="cass" size="13715">
+				<rom name="dining kitchen - basic.mzt" size="13715" crc="3e02a30f" sha1="592d2a2f53122a26ee6c7abc56dbcd8fc49e14ab" />
 			</dataarea>
 		</part>
 		<part name="cass2" interface="mz_cass">
 			<feature name="part_id" value="Part 2 - MONITOR"/>
-			<dataarea name="cass" size="2136044">
-				<rom name="dining kitchen - monitor.wav" size="2136044" crc="ee9c2e3e" sha1="8fa55d451aa259dac8d01e4f7b04e67c83a697b5" />
+			<dataarea name="cass" size="9088">
+				<rom name="dining kitchen - monitor.mzt" size="9088" crc="49160a42" sha1="e73dfe575393bca23ea0c9efc9fae59a6310b2d4" />
 			</dataarea>
 		</part>
 	</software>
@@ -186,9 +207,10 @@ Provided sheet page shows game in Color, is it the purpose of side B? (verify)
 
 	<software name="dradrive" supported="yes">
 		<description>DraDra Drive</description>
-		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<year>1984</year>
+		<publisher>Micom BASIC</publisher>
 		<info name="usage" value="mz1z001 LOAD" />
+		<info name="alt_title" value="ドラドラ ドライブ" />
 		<sharedfeat name="compatibility" value="MONO"/>
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1813248">
@@ -248,28 +270,45 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		</part>
 	</software>
 
-	<software name="fireresc" supported="partial">
+	<software name="fireresc" supported="yes">
 		<description>Fire Rescue</description>
 		<year>19??</year>
 		<publisher>Tatsuya Fujishi</publisher>		
-		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
 		<info name="usage" value="mz1z001 LOAD"/>
 		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="2109484">
-				<rom name="fire rescue.wav" size="2109484" crc="beb73ccb" sha1="f750a9354d050be4ad0e49b21a97e77af86a34b1" />
+			<dataarea name="cass" size="2318">
+				<rom name="fire rescue.mzt" size="2318" crc="da4dc4ad" sha1="cf5c37932f3ebfc09dd53ffbc1babfb37e62ddf9" />
 			</dataarea>
 		</part>
 	</software>
 
-	<software name="frogger" supported="partial">
-		<description>Frogger</description>
-		<year>19??</year>
-		<publisher>Unknown</publisher>
-		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
+	<software name="fobos" supported="yes">
+		<description>Fobos</description>
+		<year>1982</year>
+		<publisher>dB Soft</publisher>
 		<info name="usage" value="mz1z002 LOAD" />
 		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="3637100">
-				<rom name="frogger.wav" size="3637100" crc="b1f07d79" sha1="fce4d6b4cbafd263df08520b4128839db2eae76c" />
+			<feature name="part_id" value="Part 1 - BASIC"/>
+			<dataarea name="cass" size="1934">
+				<rom name="fobos - basic.mzt" size="1934" crc="eb9c4c17" sha1="cbaa70e45e52760f01d5ceaef98cf792b6a842c4" />
+			</dataarea>
+		</part>
+		<part name="cass2" interface="mz_cass">
+			<feature name="part_id" value="Part 2 - MONITOR"/>
+			<dataarea name="cass" size="10017">
+				<rom name="fobos - monitor.mzt" size="10017" crc="35aaca09" sha1="308fa1fe46cfa72304872be5dc5da87543c0e13c" />
+			</dataarea>
+		</part>
+	</software>
+
+	<software name="frogger" supported="yes">
+		<description>Frogger</description>
+		<year>19??</year>
+		<publisher>&lt;unknown&gt;</publisher>
+		<info name="usage" value="mz1z002 LOAD" />
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="16112">
+				<rom name="frogger.mzt" size="16112" crc="82f360b1" sha1="514c90a9995a8c2edff7b27d60724cec508a15c3" />
 			</dataarea>
 		</part>
 	</software>
@@ -277,7 +316,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="galawars" supported="yes">
 		<description>Galactica Wars</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1518928">
@@ -314,7 +353,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="hangman" supported="yes">
 		<description>Hangman</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="759511">
@@ -379,7 +418,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="hispdmob" supported="yes">
 		<description>High Speed Mobile Force</description>
 		<year>1982</year>
-		<publisher>X'Tal Soft</publisher>
+		<publisher>Xtal Soft</publisher>
 		<info name="usage" value="mz1z001 MON" />
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="3342593">
@@ -415,22 +454,21 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		</part>
 	</software>
 
-	<software name="hopnhop" supported="partial">
+	<software name="hopnhop" supported="yes">
 		<description>Hop'n'Hop</description>
 		<year>1983</year>
-		<publisher>Unknown</publisher>
-		<notes><![CDATA[Remove Hop'n'Hop BASIC cassette image once loading completes and Ready prompt will display. Type RUN and hit ENTER and insert and start the Monitor cassette image. Once loading completes remove the Hop'n'Hop Monitor cassette image and the game will run.]]></notes>
+		<publisher>&lt;unknown&gt;</publisher>
 		<info name="usage" value="mz1z002 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<feature name="part_id" value="Part 1 - BASIC"/>
-			<dataarea name="cass" size="1862844">
-				<rom name="hop'n'hop - basic.wav" size="1862844" crc="7b048377" sha1="6e4f5be9d94559da24afcc754a4d91be6304a78d" />
+			<dataarea name="cass" size="7357">
+				<rom name="hop'n'hop - basic.mzt" size="7357" crc="76800987" sha1="7e6357ab05337abb9fbb23adcecd844ca74fd57e" />
 			</dataarea>
 		</part>
 		<part name="cass2" interface="mz_cass">
 			<feature name="part_id" value="Part 2 - MONITOR"/>
-			<dataarea name="cass" size="885196">
-				<rom name="hop'n'hop - monitor.wav" size="885196" crc="ca344dfc" sha1="a311aec2cf5b2528727028bed333612e301d0994" />
+			<dataarea name="cass" size="2688">
+				<rom name="hop'n'hop - monitor.mzt" size="2688" crc="446745bb" sha1="8a5ba9c62b67a62e6587546dd817331996ea1932" />
 			</dataarea>
 		</part>
 	</software>
@@ -438,11 +476,24 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="hovratck" supported="yes">
 		<description>Hover Attack</description>
 		<year>1985</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<info name="usage" value="IPL"/>
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="3875500">
 				<rom name="hoverattack.wav" size="3875500" crc="cd69db18" sha1="acaccc8f4581b49af30bd3d83b15aa48aaa5f1db" />
+			</dataarea>
+		</part>
+	</software>
+
+	<software name="hungrypk" supported="partial">
+		<description>Hungry Puck</description>
+		<year>19??</year>
+		<publisher>&lt;unknown&gt;</publisher>		
+		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
+		<info name="usage" value="mz1z001 LOAD"/>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="4620">
+				<rom name="hungry puck.mzt" size="4620" crc="cbdcff2B" sha1="2c01fd1aff1632bde65cbb4f7f73e358eb672125" />
 			</dataarea>
 		</part>
 	</software>
@@ -469,6 +520,18 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="3912958">
 				<rom name="itasandrias.wav" size="3912958" crc="da6bd73d" sha1="79f5cd35a0929932d32f0661ec69bdb99181c3c2" />
+			</dataarea>
+		</part>
+	</software>
+
+	<software name="jankyou" supported="yes">
+		<description>Jan-kyou</description>
+		<year>1983</year>
+		<publisher>Hudson Soft</publisher>
+		<info name="usage" value="IPL"/>
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="6122924">
+				<rom name="jan-kyou.wav" size="6122924" crc="b322680d" sha1="d9230e6f66a6acc89bbfa1844b8731dfa0632403" />
 			</dataarea>
 		</part>
 	</software>
@@ -515,22 +578,21 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		</part>
 	</software>
 
-	<software name="kag" supported="partial">
+	<software name="kag" supported="yes">
 		<description>Ka-G</description>
 		<year>1984</year>
 		<publisher>Puck</publisher>
-		<notes><![CDATA[Remove Ka-G BASIC cassette image once loading completes and Ready prompt will display. Type RUN and hit ENTER and insert and start the Monitor cassette image. Once loading completes remove the Ka-G Monitor cassette image and the game will run.]]></notes>
-		<info name="usage" value="mz1z001 LOAD" />
+		<info name="usage" value="mz1z002 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<feature name="part_id" value="Part 1 - BASIC"/>
-			<dataarea name="cass" size="3076284">
-				<rom name="ka-g - basic.wav" size="3076284" crc="c3343bf0" sha1="a0ce13ab056b030ef8ad910397420d7c9fe357af" />
+			<dataarea name="cass" size="13203">
+				<rom name="ka-g - basic.mzt" size="13203" crc="cb60fd44" sha1="edc3dd94b4350f402922cf7ed4e858da131e083d" />
 			</dataarea>
 		</part>
 		<part name="cass2" interface="mz_cass">
 			<feature name="part_id" value="Part 2 - MONITOR"/>
-			<dataarea name="cass" size="3231708">
-				<rom name="ka-g - monitor.wav" size="3231708" crc="35988d55" sha1="7881724fd14d05734c5a68309baff5352d9bd2e0" />
+			<dataarea name="cass" size="14208">
+				<rom name="ka-g - monitor.mzt" size="14208" crc="042cb975" sha1="a025aa7a2374a1aa63dd46b293fda2858cfc9733" />
 			</dataarea>
 		</part>
 	</software>
@@ -538,7 +600,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="kwarterk" supported="yes">
 		<description>Kwarterka</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<info name="usage" value="mz1z001 MON" />
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="904909">
@@ -575,8 +637,8 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 
 	<software name="monstapc" supported="yes">
 		<description>Monsta Panic</description>
-		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<year>1984</year>
+		<publisher>Micom BASIC</publisher>
 		<info name="usage" value="mz1z002 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="8441">
@@ -600,7 +662,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="mystryhs" supported="yes">
 		<description>Mystery House</description>
 		<year>1982</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<feature name="part_id" value="Part 1"/>
@@ -634,10 +696,22 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		</part>
 	</software>
 
+	<software name="adventur" supported="yes">
+		<description>MZ Adventure</description>
+		<year>19??</year>
+		<publisher>&lt;unknown&gt;</publisher>
+		<info name="usage" value="mz1z001 MON" />
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="5684">
+				<rom name="mz adventure.mzt" size="5684" crc="2fdec88f" sha1="c2579b02a30d8cd7e4952441105b1d67b4e2ac84" />
+			</dataarea>
+		</part>
+	</software>
+
 	<software name="ninjahse" supported="yes">
 		<description>Ninja House</description>
 		<year>1983</year>
-		<publisher>X'tal Soft</publisher>
+		<publisher>Xtal Soft</publisher>
 		<info name="usage" value="mz1z001 MON" />
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="3625703">
@@ -663,28 +737,26 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		</part>
 	</software>
 
-	<software name="penguin" supported="partial">
+	<software name="penguin" supported="yes">
 		<description>Penguin Village</description>
 		<year>1984</year>
 		<publisher>Pony Inc.</publisher>		
-		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
 		<info name="usage" value="mz1z002 LOAD"/>
 		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="6141030">
-				<rom name="penguin village.wav" size="6141030" crc="3fa54df8" sha1="7d00fcb9b650f6b6147fd529aa3a34cc42557721" />
+			<dataarea name="cass" size="28616">
+				<rom name="penguin village.mzt" size="28616" crc="3d6be51e" sha1="3331543ad265c5fcf07eb202a8e55755e02f9c02" />
 			</dataarea>
 		</part>
 	</software>
 
-	<software name="piranha" supported="partial">
+	<software name="piranha" supported="yes">
 		<description>Piranha-Kun no Isshukan</description>
 		<year>19??</year>
 		<publisher>Enix</publisher>		
-		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
 		<info name="usage" value="mz1z001 LOAD"/>
 		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="3581468">
-				<rom name="piranha.wav" size="3581468" crc="de098825" sha1="aea27b80d9e56d3f73809149e28332425a2954c4" />
+			<dataarea name="cass" size="15350">
+				<rom name="piranha.mzt" size="15350" crc="ec584994" sha1="35c10a8596fc6ce03831f9215d962839bf8bf17e" />
 			</dataarea>
 		</part>
 	</software>
@@ -727,18 +799,16 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		</part>
 	</software>
 
-	<software name="puckman" supported="partial">
+	<software name="puckman" supported="yes">
 		<description>Puck Man</description>
 		<year>1982</year>
 		<publisher>Carry Lab</publisher>
-		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
 		<info name="usage" value="mz1z002 MON" />
 		<info name="serial" value="CG-29"/>
 		<info name="alt_title" value="パックマン"/>
 		<part name="cass1" interface="mz_cass">
-			<dataarea name="cass" size="2772284">
-				<!-- .mzt to .wav converted -->
-				<rom name="cg-29.wav" size="2772284" crc="7f8325d8" sha1="ff34f3159d07b0c281b660852d1b407a7fcc66d4" />
+			<dataarea name="cass" size="12673">
+				<rom name="cg-29.mzt" size="12673" crc="8f3dccae" sha1="2c6614f3da30b8326fd8cc9da11b2cc2a1324e9b" />
 			</dataarea>
 		</part>
 	</software>
@@ -746,7 +816,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="pucknboy" supported="partial">
 		<description>Puckn Boy</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>		
+		<publisher>&lt;unknown&gt;</publisher>		
 		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
 		<info name="usage" value="mz1z002 MON"/>
 		<part name="cass1" interface="mz_cass">
@@ -759,7 +829,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="runner" supported="partial">
 		<description>Runner</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
 		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
@@ -772,7 +842,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="scrlgame" supported="partial">
 		<description>Scroll Game</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<notes><![CDATA[Remove Scroll Game BASIC cassette image once loading completes and Ready prompt will display. Type RUN and hit ENTER and insert and start the Scroll Game Monitor cassette image. Once loading completes remove the Monitor cassette image and the game will run.]]></notes>
 		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
@@ -854,6 +924,18 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 		</part>
 	</software>
 
+	<software name="sugoroku" supported="yes">
+		<description>Sugoroku Game</description>
+		<year>19??</year>
+		<publisher>&lt;unknown&gt;</publisher>
+		<info name="usage" value="mz1z001 MON" />
+		<part name="cass1" interface="mz_cass">
+			<dataarea name="cass" size="1194">
+				<rom name="sugoroku.mzt" size="1194" crc="dfcf1270" sha1="7d87e341394e59207e44a4c0ce06994ae8eb094d" />
+			</dataarea>
+		</part>
+	</software>
+
 	<software name="suprdoor" supported="yes">
 		<description>Super Doors</description>
 		<year>1983</year>
@@ -899,7 +981,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="starflet" supported="yes">
 		<description>Star Fleet</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>		
+		<publisher>&lt;unknown&gt;</publisher>		
 		<info name="usage" value="mz1z001 LOAD"/>
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="3192699">
@@ -911,7 +993,7 @@ Bacteria: goes in Monitor TS-2000, fails to load second part
 	<software name="startrek" supported="yes">
 		<description>Star Trek</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>
+		<publisher>&lt;unknown&gt;</publisher>
 		<info name="usage" value="mz1z001 LOAD" />
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="874047">
@@ -964,10 +1046,11 @@ CHECK SUM ERROR, boots with Z80 clock set at 3.2 MHz (80%)
 
 	<software name="volkswgn" supported="partial">
 		<description>Volkswagen's Journey Part 2</description>
-		<year>19??</year>
-		<publisher>Unknown</publisher>		
+		<year>1984</year>
+		<publisher>Micom BASIC</publisher>		
 		<notes><![CDATA[Remove cassette image once loading completes and software will then run]]></notes>
 		<info name="usage" value="mz1z001 LOAD"/>
+		<info name="alt_title" value="フォルクス・ワーゲンの旅 Part 2"/>
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="2823820">
 				<rom name="volkswagen's journey part 2.wav" size="2823820" crc="d13e2b6c" sha1="ce1e37ad9a591327378e8f756c47c28e00dbe34c" />
@@ -1021,7 +1104,7 @@ Has issues displaying title screen in color mode, incompatible? (verify)
 	<software name="yuurei" supported="yes">
 		<description>Yuurei</description>
 		<year>19??</year>
-		<publisher>Unknown</publisher>		
+		<publisher>&lt;unknown&gt;</publisher>		
 		<info name="usage" value="mz1z001 LOAD"/>
 		<part name="cass1" interface="mz_cass">
 			<dataarea name="cass" size="1912580">
